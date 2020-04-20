@@ -99,9 +99,13 @@ textarea {
    ========================================================================== */
 /* ===================== Base styles ===================== */
    header, footer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+   }
+   .content-wrapper {
+    width: 90%;
    }
 
    h1{
@@ -118,25 +122,43 @@ textarea {
 /* ===================== Header styles ===================== */
 
 header {
-
+  width: 100%;
+  padding: 15px 20px;
+  margin: 0;
 }
 
 header .content-wrapper {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
 
-header figure {
+ header figure{
+  width: 60%; /*60 percent of the content wrapper*/
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+header figure a img{
+  width: 100%; /*100% of the figure*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
 }
 
 header .header-divider{
-
+ width: 100%;
 }
 
 header nav {
+  width:70%;  /*70% of the container its in which is the content wrapper*/
+  padding: 20px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -144,7 +166,12 @@ header nav {
 }
 
 header nav ul {
-
+  width: 100%;/* 100% of the container it is in which is nav*/
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 header nav ul li {
@@ -154,8 +181,14 @@ header nav ul li {
 /* ===================== footer styles ===================== */
 
 
-footer .footer-content{
+footer .content-wrapper{
+  width: 55%;
+  text-align: center;
+  padding-top: 50px;
+}
 
+.footer-content address p {
+  margin: 0;
 }
 
 footer .social {
@@ -173,47 +206,91 @@ footer .social-icons {
 /* ===================== Mobile styles - Homepage ===================== */
 
 .hero-area {
+  min-height:500px;
+  padding: 55px 20px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: row wrap;
 }
-.hero-area .content-wrapper{
-
+.hero-area h1{
+  margin: 0; /* taking away the default margin*/
 }
 
 aside {
+  min-height: 330px;  /* not sure if this is necessary*/
+  padding: 30px 20px 55px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
 
+aside h3 {
+  margin: 0;
+}
+ /* For both above and below, taking away default style */
+aside p {
+  margin: 0;
+}
+
 aside .content-wrapper {
+   width: 100%; /* 100% of the aside */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
 }
 
 aside .form-description {
-display: flex;
-  justify-content: flex-start;
+
+  display: flex;
+  justify-content: flex-center;
   align-items: center;
+  flex-flow: row wrap;
+}
+
+
+aside .form-description h3 {
+  margin-bottom: 15px;
+}
+
+aside .form-description p {
+  margin-bottom: 40px;
 }
 
 aside .form{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-flow: row wrap;
+}
+aside h3{
+  margin-bottom: 10px;
+}
+aside input {
+  margin: 10px 0;
+  min-height: 50px;
+}
+aside .form input {
+  width: 100%;
 }
 
 .features {
+  padding: 55px 0 65px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
 
+.features h1 {
+  margin: 0;
+}
+
+.features article {
+  width: 55%;
+}
 
 .features .features-items {
   display: flex;
@@ -231,14 +308,19 @@ aside .form{
 }
 
 .reviews {
+  min-height: 608px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
+reviews h3 {
+  width: 48%;
+}
 
-.reviews .content-wrapper {
-  
+/* Not sure if there should be a content wrapper div in the article div but its there and looks normal */
+.reviews article .content-wrapper {
+  width: 100%
 }
 
 .reviews article {
