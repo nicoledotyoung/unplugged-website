@@ -207,19 +207,32 @@ footer .social-icons {
 
 .hero-area {
   min-height:500px;
-  padding: 55px 20px;
+  /* padding: 55px 20px; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: row wrap;
+}
+/* Not sure if padding or margin works best here yet */
+.hero-area .content-wrapper { 
+  margin: 55px 20px;
 }
 .hero-area h1{
   margin: 0; /* taking away the default margin*/
 }
 
 aside {
-  min-height: 330px;  /* not sure if this is necessary*/
-  padding: 30px 20px 55px;
+  max-height: 330px;  /* not sure if this is necessary*/
+  /* padding: 30px 20px 55px; should it be margin or padding?*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+aside .content-wrapper {
+  width: 100%; /* 100% of the aside */
+  margin: 30px 20px 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,14 +245,6 @@ aside h3 {
  /* For both above and below, taking away default style */
 aside p {
   margin: 0;
-}
-
-aside .content-wrapper {
-   width: 100%; /* 100% of the aside */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
 }
 
 aside .form-description {
@@ -277,11 +282,15 @@ aside .form input {
 }
 
 .features {
-  padding: 55px 0 65px 0;
+  /* padding: 55px 0 65px 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.features .content-wrapper {
+  margin: 55px 0 65px;
 }
 
 .features h1 {
@@ -330,11 +339,15 @@ reviews h3 {
 /* ===================== Mobile styles - About ===================== */
 
 .mission {
-  padding: 50px 0;
+  /* padding: 50px 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.mission .content-wrapper {
+  margin: 50px 0;
 }
 
 .mission h1{
@@ -350,11 +363,15 @@ reviews h3 {
 }
 
 .contact-section{
-  padding: 50px 0;
+  /* padding: 50px 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.contact-section .content-wrapper {
+  margin: 50px 0;
 }
 
 .info-column address p {
@@ -364,7 +381,7 @@ reviews h3 {
 /* ===================== Mobile styles - FAQ ===================== */
 
 .faq{
-  padding: 45px 0;
+  /* padding: 45px 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,6 +393,7 @@ reviews h3 {
 }
 
 .faq .content-wrapper{
+  margin: 45px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,17 +489,226 @@ reviews h3 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+/*Tablet styles here*/
+/* General styles */
+    .content-wrapper {
+        max-width: 640px;
+        margin: 100px 0;
+    }
+ 
+    /* Header */
+ 
+    header {
+      height: 100px; /* should this be min height?*/
+    }
+ 
+    header .content-wrapper {
+      margin: 0;
+      justify-content: space-between;
+    }
+    header figure {
+      width: 35%;
+    }
+ 
+    header nav {
+        width: 25%;
+        
+    }
+ 
+    header nav ul {
+ 
+    }
+ 
+    .header-divider {
+        display: none;
+    }
+ 
+    /* Hero Area */
+    .hero-area .content-wrapper {
+      margin: 100px 65px;
+
+    }
+    /* Aside */
+    aside .content-wrapper {
+        margin: 50px 0;
+        justify-content: space-between;
+    }
+ 
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {        
+        width: 40%;        
+        margin: 0;
+
+    }
+
+    aside .content-wrapper .form-description h3 {
+      margin-bottom: 50px;
+    }
+ 
+    /* Features */
+ 
+    .features article {
+     width: 195px;
+    }
+ 
+    .features .features-items {
+      padding: 0 68px; /* this padding was the key to the 2 columns */
+      justify-content: space-between;
+      align-content: center;
+        
+    }
+ 
+    /* Reviews */
+    .reviews article {
+      flex-flow: row wrap;
+    }
+    
+    .reviews figure {
+      width: 50%;
+    }
+    .reviews article div {
+        width: 50%;
+
+    }
+ 
+    /* Footer */
+    footer {
+      height: 325px;
+    }
+    footer .content-wrapper {
+        width: 520px;
+        margin: 100px 0;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    
+    .footer-content {
+      width: 30%;
+    }
+    .social {
+      width: 30%;
+    }
+ 
+    footer .contact {
+        margin-bottom: 0;
+    }
+ 
+    footer .copyright {
+        width:
+    }
+
+    /* ABOUT PAGE */
+
+    /* Mission section */
+    .mission .mission-content {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      flex-flow: row wrap;
+
+    }
+    .mission .mission-content p {
+      width: 45%;
+    }
+
+/* Cotact section */
+    .contact-section .info-sections {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      flex-flow: row wrap;
+
+    }
+
+    .info-column {
+      width: 40%;
+    }
+    
+    /* FAQ page */
+    /* FAQ section */
+    .faq .content-wrapper .questions{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: space-around;
+      flex-flow: row wrap;
+    }
+
+    .faq-content .questions article {
+      width: 47%;
+
+    }
+
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+ 
+@media only screen and (min-width: 1200px) {
+/*Desktop styles here*/
+.content-wrapper {
+  max-width: 960px;
+  margin: 50px 0;
 }
 
+header nav {
+  width: 15%;
+
+}
+
+header figure{
+  width: 30%;
+}
+/* homepage */
+/* HERO AREA */
+.hero-area .content-wrapper{
+  margin: 50px 120px;
+}
+
+aside .content-wrapper .form-description,
+    aside .content-wrapper .form {        
+        width: 33%;        
+        margin: 0;
+        padding: 0 80px;
+
+    }
+
+    /* features */
+.features .features-items {
+      padding: 0 80px; /* this padding was the key to the 2 columns */
+      justify-content: space-evenly;
+      align-items: stretch;
+      align-content: space-between;
+      flex-flow: row wrap
+        
+    }
+
+    .features article {
+     width: 195px;
+     margin: 0 30px;
+    }
+
+    /* footer */
+    footer {
+      height: 340px;
+    }
+
+    footer .content-wrapper {
+        width: 835px;
+        padding:0 60px;
+        
+    }
+    .footer-content {
+      width: 20%;
+    }
+
+    .social {
+      width: 20%;
+    }
+
+    /* ABOUT PAGE */
+    /* FAQ page */
+    
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
