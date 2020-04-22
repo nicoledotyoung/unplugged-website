@@ -102,6 +102,7 @@ textarea {
      font-family: 'Open Sans', sans-serif;
      font-size: 1em;
      line-height: 1.5em;
+     color: white;
    }
 
   header, footer {
@@ -116,9 +117,12 @@ textarea {
    }
 
    h1{
-     font-size: 3.75;
-     line-height: 4.5;
+     font-family: 'Poppins', sans-serif;
+     font-weigh:500;
+     font-size: 3.75em;
+     line-height: 1.25em;
      font-weight: 400;
+
 
    }
 
@@ -171,6 +175,7 @@ header {
   width: 100%;
   padding: 15px 0;
   margin: 0;
+  background-color: #202322;
 }
 
 header .content-wrapper {
@@ -226,6 +231,9 @@ header nav ul li {
 
 /* ===================== footer styles ===================== */
 
+footer {
+  background-color: #202322;
+}
 
 footer .content-wrapper{
   width: 55%;
@@ -250,7 +258,7 @@ footer .social-icons {
 
 }
 /* ===================== Mobile styles - Homepage ===================== */
-
+/* HERO AREA */
 .hero-area {
   min-height:500px;
   /* padding: 55px 20px; */
@@ -258,6 +266,11 @@ footer .social-icons {
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: row wrap;
+  background-image: url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
 }
 /* Not sure if padding or margin works best here yet */
 .hero-area .content-wrapper { 
@@ -267,16 +280,19 @@ footer .social-icons {
   margin: 0; /* taking away the default margin*/
 }
 
+/* EMAIL FORM */
 aside {
+  background-color: #527158;
   max-height: 330px;  /* not sure if this is necessary*/
   /* padding: 30px 20px 55px; should it be margin or padding?*/
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; THIS DIDN'T WORK FOR THE ALIGNMENT OF THE CONTENT*/
 }
 
 aside .content-wrapper {
+  
   width: 100%; /* 100% of the aside */
   margin: 30px 20px 55px;
   display: flex;
@@ -327,8 +343,39 @@ aside .form input {
   width: 100%;
 }
 
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* FEATURES */
 .features {
   /* padding: 55px 0 65px 0; */
+  background-image: url(../img/amenities.jpg);
+  background-repeat: no repeat;
+  background-size: cover;
+  background-color: 0,0,0, .7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +409,9 @@ aside .form input {
 
 }
 
+/* REVIEWS */
 .reviews {
+  background-color: #2a423a;
   min-height: 608px;
   display: flex;
   justify-content: center;
@@ -386,6 +435,7 @@ reviews h3 {
 
 .mission {
   /* padding: 50px 0; */
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,6 +460,7 @@ reviews h3 {
 
 .contact-section{
   /* padding: 50px 0; */
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -428,6 +479,7 @@ reviews h3 {
 
 .faq{
   /* padding: 45px 0; */
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -676,9 +728,7 @@ reviews h3 {
     /* FAQ section */
     .faq .content-wrapper .questions{
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      align-content: space-around;
+      justify-content: space-between;
       flex-flow: row wrap;
     }
 
