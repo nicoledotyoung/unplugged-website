@@ -476,17 +476,17 @@ input[type=button] {
 }
 
 .map-container{
-  /* min-height: 450px; This was before adding the map*/
+  min-height: 450px; 
   position: relative;
-  padding-bottom: 75%;
-  height: 0;
+  padding-bottom: 80%;
+  /* height: 0; */
   overflow: hidden;
 }
 
 .map-container iframe {
   position: absolute;
   top: 0;
-  lett: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 }
@@ -751,6 +751,11 @@ input[type=button] {
       width: 45%;
     }
 
+    .map-container{
+      min-height: 0;;
+      padding-bottom: 45%;
+  }
+
 /* Cotact section */
     .contact-section .info-sections {
       display: flex;
@@ -843,6 +848,11 @@ aside .content-wrapper .form-description,
     }
 
     /* ABOUT PAGE */
+
+     .map-container{
+      min-height: 0;;
+      padding-bottom: 37.5%;
+  }
     /* FAQ page */
 
 /* ==========================================================================
