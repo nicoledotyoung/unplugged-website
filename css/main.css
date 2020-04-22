@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -98,23 +98,69 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* ===================== Base styles ===================== */
-   header, footer {
+  body {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 1em;
+     line-height: 1.5em;
+   }
+
+  header, footer {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
    }
+
    .content-wrapper {
     width: 90%;
    }
 
    h1{
+     font-size: 3.75;
+     line-height: 4.5;
+     font-weight: 400;
 
    }
-   h3{
 
-   }
+  h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 3em;
+      line-height: 1.25em;
+  }
+  h3 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+    font-weight: 400;
+  }
 
+  h4 {
+    font-size: 1.875em;
+    line-height: 1.125em;
+    font-weight: 400;
+  }
+  h6 {
+    font-size: 1.1875em;
+    ont-weight: 400;
+  }
+  h3, 
+  h4 {
+      font-family: 'Poppins', sans-serif;
+  }
+
+  a {
+    color: #e2e3ed;
+    text-decoration: none;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+    text-transform: smallcaps;
+  }
+  address {
+    font-style: normal;
+  }
    p{
 
    }
@@ -708,7 +754,7 @@ aside .content-wrapper .form-description,
 
     /* ABOUT PAGE */
     /* FAQ page */
-    
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
