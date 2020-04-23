@@ -400,9 +400,14 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
-.fontawesome-icon{
-
-}
+  /* custom styling for icons */
+    article p {
+      text-align: center;
+    }
+    article p i {
+      font-size: 4em;
+      
+    }
 
 .feature-description{
 
@@ -829,6 +834,8 @@ aside .content-wrapper .form-description,
      margin: 0 30px;
     }
 
+
+      
     /* footer */
     footer {
       height: 340px;
